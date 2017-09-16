@@ -1,5 +1,6 @@
 package com.example.mirna.intheclouds;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ public class MainActivity extends LoginActivity{
 
         logging = new Button(this);
 
-        ll.setId(R.id.main);
+        ll = (LinearLayout)findViewById(R.id.main);
 
         ll.addView(logging);
 
@@ -29,6 +30,8 @@ public class MainActivity extends LoginActivity{
         logging.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), LoggingInfo.class);
+                startActivity(i);
             }
         });
     }
