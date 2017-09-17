@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.util.Vector;
+
 /**
  * Created by mirna on 9/16/2017.
  */
@@ -23,16 +25,18 @@ public class MainActivity extends LoginActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
+        Vector database =  new Vector<SleepEntry>();
+
         logging = new Button(this);
         logging.setText("Log Your Sleep");
-        ll = (LinearLayout)findViewById(R.id.main);
-        ll.addView(logging);
         stats = new Button(this);
         stats.setText("Your Sleep Stats");
         education = new Button(this);
         education.setText("Sleeping Tips");
-        ll.addView(education);
+        ll = (LinearLayout)findViewById(R.id.main);
+        ll.addView(logging);
         ll.addView(stats);
+        ll.addView(education);
 
         logging.setOnClickListener(new View.OnClickListener() {
             @Override
