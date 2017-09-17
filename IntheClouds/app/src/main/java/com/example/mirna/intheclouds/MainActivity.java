@@ -25,12 +25,12 @@ public class MainActivity extends LoginActivity{
 
         logging = new Button(this);
         logging.setText("Log Your Sleep");
-        ll = (LinearLayout)findViewById(R.id.main);
-        ll.addView(logging);
         stats = new Button(this);
         stats.setText("Your Sleep Stats");
         education = new Button(this);
         education.setText("Sleeping Tips");
+        ll = (LinearLayout)findViewById(R.id.main);
+        ll.addView(logging);
         ll.addView(education);
         ll.addView(stats);
 
