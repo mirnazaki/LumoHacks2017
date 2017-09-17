@@ -31,8 +31,8 @@ public class MainActivity extends LoginActivity{
         education.setText("Sleeping Tips");
         ll = (LinearLayout)findViewById(R.id.main);
         ll.addView(logging);
-        ll.addView(stats);
         ll.addView(education);
+        ll.addView(stats);
 
         logging.setOnClickListener(new View.OnClickListener() {
             @Override
