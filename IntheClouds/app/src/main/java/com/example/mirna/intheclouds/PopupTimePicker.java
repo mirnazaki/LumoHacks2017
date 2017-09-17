@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.TextView;
 
 /**
  * Created by HY on 2017-09-16.
@@ -14,6 +16,7 @@ import android.widget.TimePicker;
 public class PopupTimePicker extends LoggingInfo {
     Button close;
     TimePicker timePicker;
+    int poop;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -36,9 +39,12 @@ public class PopupTimePicker extends LoggingInfo {
                 //SleepEntry se = new SleepEntry();
                 se.intoBed = se.getTime(timePicker.getHour(), timePicker.getMinute());
                 System.out.println("TimePicker Value in popup: "+se.intoBed);
-
+                //poop = se.intoBed;
                 finish();
+                //System.out.println("TimePicker Value in popup the second: "+se.intoBed);
             }
         });
     }
+
+
 }
