@@ -15,6 +15,7 @@ public class MainActivity extends LoginActivity{
 
     Button logging;
     Button stats;
+    Button education;
     LinearLayout ll;
 
     @Override
@@ -28,6 +29,9 @@ public class MainActivity extends LoginActivity{
         ll.addView(logging);
         stats = new Button(this);
         stats.setText("Your Sleep Stats");
+        education = new Button(this);
+        education.setText("Sleeping Tips");
+        ll.addView(education);
         ll.addView(stats);
 
         logging.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +46,13 @@ public class MainActivity extends LoginActivity{
             public void onClick(View view) {
                 Intent j = new Intent(getApplicationContext(), StatsInfo.class);
                 startActivity(j);
+            }
+        });
+        education.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getApplicationContext(), EducationMaterial.class);
+                startActivity(k);
             }
         });
     }
