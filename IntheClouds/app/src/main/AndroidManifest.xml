@@ -29,6 +29,9 @@
         <activity android:name=".LoggingInfo">
 
         </activity>
+        <activity android:name=".EducationMaterial">
+
+        </activity>
     </application>
 
 </manifest>
