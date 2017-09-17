@@ -30,7 +30,9 @@
         <activity android:name=".StatsInfo">
         </activity>
         <activity android:name=".EducationMaterial">
-
+        </activity>
+        <activity android:name=".PopupTimePicker"
+            android:theme="@style/AppTheme2">
         </activity>
     </application>
 

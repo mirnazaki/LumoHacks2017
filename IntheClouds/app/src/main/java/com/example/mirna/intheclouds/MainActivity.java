@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import java.util.Vector;
+
 /**
  * Created by mirna on 9/16/2017.
  */
@@ -22,6 +24,8 @@ public class MainActivity extends LoginActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        Vector database =  new Vector<SleepEntry>();
 
         logging = new Button(this);
         logging.setText("Log Your Sleep");
